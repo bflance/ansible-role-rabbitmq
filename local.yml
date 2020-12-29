@@ -3,6 +3,6 @@
   hosts: all
   user: root
   become: true
-  connection: local # or ssh or paramiko
+  connection: local
   roles:
     - ansible-role-rabbitmq

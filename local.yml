@@ -2,6 +2,7 @@
 - name: Ansible Pull file
   hosts: localhost
   user: root
+  become: true
   connection: local # or ssh or paramiko
   roles:
     - ansible-role-rabbitmq

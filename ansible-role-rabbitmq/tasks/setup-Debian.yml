@@ -10,3 +10,10 @@
 
 - name: Enables the rabbitmq_management plugin
   shell: rabbitmq-plugins enable rabbitmq_management
+
+
+ - name: Add and configure management user
+    shell: |
+      rabbitmqctl add_user "admin" "Test12"
+      rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+      rabbitmqctl set_user_tags admin administrator      

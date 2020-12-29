@@ -1,6 +1,6 @@
 ---
 - name: Ansible Pull file
-  hosts: localhost
+  hosts: all
   user: root
   become: true
   connection: local # or ssh or paramiko

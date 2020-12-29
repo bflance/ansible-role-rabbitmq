@@ -7,3 +7,8 @@
   with_items:
   - rabbitmq-server
   - vim 
+
+- name: Enables the rabbitmq_management plugin
+  community.rabbitmq.rabbitmq_plugin:
+    names: rabbitmq_management
+    state: disabled

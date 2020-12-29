@@ -1,10 +1,8 @@
 ---
-- name: Download RabbitMQ package.
-  get_url:
-    url: "{{ rabbitmq_deb_url }}"
-    dest: "/tmp/{{ rabbitmq_deb }}"
+- name: Setup Rabbitmq repo
+  script: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
 
-- name: Ensure RabbitMQ is installed.
-  apt:
-    deb: "/tmp/{{ rabbitmq_deb }}"
-    state: present
+- name: Install rabbitmq
+  apt: name={{ item }} state=installed
+  with_items:
+  - rabbitmq-server

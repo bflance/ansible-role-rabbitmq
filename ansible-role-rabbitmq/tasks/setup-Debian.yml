@@ -3,7 +3,7 @@
   shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash
 
 - name: Install rabbitmq
-  apt: name={{ item }} state=installed
+  apt: name={{ item }} state=present
   with_items:
   - rabbitmq-server
   - vim 

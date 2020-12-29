@@ -9,6 +9,4 @@
   - vim 
 
 - name: Enables the rabbitmq_management plugin
-  community.rabbitmq.rabbitmq_plugin:
-    names: rabbitmq_management
-    state: disabled
+  shell: rabbitmq-plugins enable rabbitmq_management

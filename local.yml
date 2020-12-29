@@ -4,4 +4,4 @@
   user: root
   connection: local # or ssh or paramiko
   roles:
-    - ansible-role-rabbitmq
+    - ../ansible-role-rabbitmq
